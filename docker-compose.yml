@@ -1,0 +1,39 @@
+services:
+  backend-1:
+    image: adaptive-backend:latest
+    build:
+      context: .
+      dockerfile: cmd/backend/Dockerfile
+    ports:
+      - "9001:8080"
+    environment:
+      PORT: "8080"
+      SERVER_ID: "backend-1"
+    cpus: "0.5"
+    mem_limit: 256m
+
+  backend-2:
+    image: adaptive-backend:latest
+    build:
+      context: .
+      dockerfile: cmd/backend/Dockerfile
+    ports:
+      - "9002:8080"
+    environment:
+      PORT: "8080"
+      SERVER_ID: "backend-2"
+    cpus: "0.5"
+    mem_limit: 256m
+
+  backend-3:
+    image: adaptive-backend:latest
+    build:
+      context: .
+      dockerfile: cmd/backend/Dockerfile
+    ports:
+      - "9003:8080"
+    environment:
+      PORT: "8080"
+      SERVER_ID: "backend-3"
+    cpus: "0.5"
+    mem_limit: 256m

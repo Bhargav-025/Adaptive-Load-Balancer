@@ -1,0 +1,4 @@
+# Project: Adaptive Load Balancer with ML-Based Failure Prediction
+Stack: Go (load balancer + backends, standard library preferred), Python 3 + scikit-learn + FastAPI (ML service), Docker Compose.
+Architecture: reverse proxy -> routing engine (RoundRobin, LeastConnections, Adaptive weighted) -> backend registry -> health/metrics monitor -> ML predictor (HTTP service) -> decision engine (Healthy/Warning/Critical) -> recovery manager (Critical -> Testing -> Active).
+Rules: keep code simple and readable, small functions, comments on non-obvious logic, handle errors explicitly, use sync/atomic or mutexes for shared state, no over-engineering. Build only what I ask in each prompt, nothing extra.
